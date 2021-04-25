@@ -34,6 +34,10 @@ button {
   margin-left: auto;
 }
 
+.hide__mobile {
+  display: none !important;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -47,6 +51,28 @@ button {
 }
 .navbar__brand {
   width: 100px;
+}
+.mobile__navbar__items {
+  background-color: #f9fafc;
+  padding: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+}
+
+.hamburger__menu > div {
+  width: 35px;
+  height: 5px;
+  background-color: #f9fafc;
+  margin: 6px 0;
+}
+
+.hamburger__menu__close {
+  display: none !important;
+}
+
+.mobile__navbar__items > ul > li {
+  margin: 20px 0;
 }
 
 .button__primary {
@@ -260,6 +286,12 @@ footer > ul > li {
 }
 
 @media (min-width: 768px) {
+  .hide__mobile {
+    display: block !important;
+  }
+  .mobile__only {
+    display: none !important;
+  }
   .hero__container {
     display: flex;
     flex-direction: row-reverse;
